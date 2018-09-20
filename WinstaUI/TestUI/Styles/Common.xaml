@@ -10,7 +10,8 @@
             </Style>
             <SolidColorBrush x:Key="AppBackgroundBrush" Color="#ffffff" />
             <media:AcrylicBrush x:Key="CustomAcrylicBrush" BackgroundSource="HostBackdrop" TintOpacity="0.699999984353781" TintColor="#ffffff" FallbackColor="#cccad4" />
-            
+            <media:AcrylicBrush x:Key="CustomInAppAcrylicBrush" BackgroundSource="Backdrop" TintOpacity="0.699999984353781" TintColor="#ffffff" FallbackColor="#cccad4" />
+
             <LinearGradientBrush x:Key="AppBackgroundGrad" EndPoint="0,1" StartPoint="1,0">
                 <GradientStop Color="White" Offset="0"/>
                 <GradientStop Color="White" Offset="1.5"/>
@@ -21,7 +22,9 @@
                 <Setter Property="Source" Value="/Assets/Headings/WinstappW.png"/>
             </Style>
             <SolidColorBrush x:Key="AppBackgroundBrush" Color="#1a2336" />
-            <media:AcrylicBrush x:Key="CustomAcrylicBrush" BackgroundSource="HostBackdrop" TintOpacity="0.699999984353781" TintColor="#1a2336" FallbackColor="#252c39" />
+            <media:AcrylicBrush x:Key="CustomAcrylicBrush" BackgroundSource="HostBackdrop" TintOpacity="0.599999984353781" TintColor="#1a2336" FallbackColor="#252c39" />
+            <media:AcrylicBrush x:Key="CustomInAppAcrylicBrush" BackgroundSource="Backdrop" TintOpacity="0.599999984353781" TintColor="#1a2336" FallbackColor="#cccad4" />
+
             <LinearGradientBrush x:Key="AppBackgroundGrad" EndPoint="0,1" StartPoint="1,0">
                 <GradientStop Color="#29354e" Offset="-1"/>
                 <GradientStop Color="#070d18" Offset="1.5"/>

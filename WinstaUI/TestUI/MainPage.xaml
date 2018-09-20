@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid x:Name="MG" >
-        <SplitView x:Name="Split" PaneBackground="{ThemeResource CustomAcrylicBrush}" DisplayMode="Overlay" IsPaneOpen="True">
+        <SplitView x:Name="Split" DisplayMode="Overlay" IsPaneOpen="True">
             <SplitView.Pane>
                 <Grid Margin="0,100,0,25">
 
@@ -20,7 +20,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid>
-                    <StackPanel Margin="35,0,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <StackPanel Name="Stak" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
                         <Button x:Name="HmenuBTN" Content="&#xE700;" Background="Transparent" BorderThickness="0,0,0,0" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" FontSize="18" Click="HmenuBTN_Click" Height="48" Width="48"/>
 
                         <Image Style="{StaticResource TitleIcon}" Height="27" Grid.Row="0"  />
@@ -28,7 +28,7 @@
 
                 </Grid>
 
-                <Frame x:Name="Fr" HorizontalAlignment="Stretch" Margin="40,20,30,0" Grid.Row="1" VerticalAlignment="Stretch" />
+                <Frame x:Name="Fr" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" />
             </Grid>
 
         </SplitView>
@@ -44,6 +44,9 @@
                         <Setter Target="HmenuBTN.Visibility" Value="Collapsed" />
                         <Setter Target="Split.IsPaneOpen" Value="True"/>
                         <Setter Target="Split.DisplayMode" Value="Inline"/>
+                        <Setter Target="Split.PaneBackground" Value="{ThemeResource CustomAcrylicBrush}" />
+                        <Setter Target="Fr.Margin" Value="40,20,30,0" />
+                        <Setter Target="Stak.Margin" Value="35,0,0,0" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="WideState">
@@ -54,6 +57,9 @@
                         <Setter Target="HmenuBTN.Visibility" Value="Visible" />
                         <Setter Target="Split.IsPaneOpen" Value="False" />
                         <Setter Target="Split.DisplayMode" Value="Overlay" />
+                        <Setter Target="Split.PaneBackground" Value="{ThemeResource CustomInAppAcrylicBrush}" />
+                        <Setter Target="Fr.Margin" Value="10,5,10,0" />
+                        <Setter Target="Stak.Margin" Value="5,0,0,0" />
                     </VisualState.Setters>
                 </VisualState>
                 <VisualState x:Name="NarrowState">
@@ -64,6 +70,9 @@
                         <Setter Target="HmenuBTN.Visibility" Value="Visible" />
                         <Setter Target="Split.IsPaneOpen" Value="False" />
                         <Setter Target="Split.DisplayMode" Value="Overlay" />
+                        <Setter Target="Split.PaneBackground" Value="{ThemeResource CustomInAppAcrylicBrush}" />
+                        <Setter Target="Fr.Margin" Value="10,5,10,0" />
+                        <Setter Target="Stak.Margin" Value="5,0,0,0" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
