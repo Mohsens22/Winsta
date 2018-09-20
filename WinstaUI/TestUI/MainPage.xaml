@@ -16,11 +16,11 @@
             </SplitView.Pane>
             <Grid Background="{StaticResource AppBackgroundGrad}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="68"/>
+                    <RowDefinition Height="90"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid>
-                    <Image Style="{StaticResource TitleIcon}" Height="30" Grid.Row="0" Margin="32,0,0,0" HorizontalAlignment="Left" />
+                    <Image Style="{StaticResource TitleIcon}" Height="27" Grid.Row="0" Margin="35,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" />
                 </Grid>
                 
                 <Frame x:Name="Fr" HorizontalAlignment="Stretch" Margin="40,20,30,0" Grid.Row="1" VerticalAlignment="Stretch" />
