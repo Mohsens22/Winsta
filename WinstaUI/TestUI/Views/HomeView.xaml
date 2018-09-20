@@ -11,10 +11,25 @@
 
     <Grid>
         <RelativePanel>
-            <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
                 <ux:InstaStoryFeedUC />
             </StackPanel>
 
+            <StackPanel Orientation="Vertical">
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+                <ux:InstaStoryFeedUC />
+            </StackPanel>
         </RelativePanel>
     </Grid>
 </Page>

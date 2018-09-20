@@ -28,12 +28,11 @@
                     </LinearGradientBrush>
                 </Ellipse.Stroke>
             </Ellipse>
-            <!--<Ellipse Width="62" Height="62" VerticalAlignment="Center" HorizontalAlignment="Center" StrokeThickness="1.8" Stroke="{Binding Converter={StaticResource StorySeenToColorConverter}, Mode=OneWay}"/>-->
-            <Ellipse x:Name="EllipsePicture" Opacity="0" Width="53" Height="53" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Ellipse x:Name="EllipsePicture" Opacity="1" Width="58" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Ellipse.Fill>
                     <ImageBrush>
                         <ImageBrush.ImageSource>
-                            <BitmapImage  UriSource="Assets/SamplePics/MohsenPic.jpg"/>
+                            <BitmapImage  UriSource="/Assets/SamplePics/MohsenPic.jpg"/>
                         </ImageBrush.ImageSource>
                     </ImageBrush>
                 </Ellipse.Fill>
@@ -44,6 +43,6 @@
             </Grid>
 
         </Grid>
-        <TextBlock x:Name="Name" Grid.Row="1" Text="{Binding User.UserName}" TextAlignment="Center" MaxWidth="62" MaxLines="1" TextTrimming="CharacterEllipsis" TextWrapping="Wrap" Margin="0,3,0,0" FontSize="12" HorizontalAlignment="Center" FontWeight="Normal"/>
+        
     </Grid>
 </UserControl>
