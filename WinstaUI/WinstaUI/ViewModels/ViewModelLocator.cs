@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 using CommonServiceLocator;
 
 using GalaSoft.MvvmLight.Ioc;
@@ -25,7 +24,6 @@ namespace WinstaUI.ViewModels
             Register<MainViewModel, MainPage>();
             Register<SettingsViewModel, SettingsPage>();
             Register<ShareTargetViewModel, ShareTargetPage>();
-            Register<SchemeActivationSampleViewModel, SchemeActivationSamplePage>();
         }
 
         public SchemeActivationSampleViewModel SchemeActivationSampleViewModel => ServiceLocator.Current.GetInstance<SchemeActivationSampleViewModel>();

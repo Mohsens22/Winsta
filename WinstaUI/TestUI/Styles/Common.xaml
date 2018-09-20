@@ -1,0 +1,27 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:media="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+            <Style x:Key="TitleIcon" TargetType="Image">
+                <Setter Property="Source" Value="/Assets/Headings/WinstappBlack.png"/>
+            </Style>
+            <SolidColorBrush x:Key="AppBackgroundBrush" Color="#ffffff" />
+            <media:AcrylicBrush x:Key="CustomAcrylicBrush" BackgroundSource="HostBackdrop" TintOpacity="0.699999984353781" TintColor="#ffffff" FallbackColor="#cccad4" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Dark">
+            <Style x:Key="TitleIcon" TargetType="Image">
+                <Setter Property="Source" Value="/Assets/Headings/WinstappW.png"/>
+            </Style>
+            <SolidColorBrush x:Key="AppBackgroundBrush" Color="#1a2336" />
+            <media:AcrylicBrush x:Key="CustomAcrylicBrush" BackgroundSource="HostBackdrop" TintOpacity="0.699999984353781" TintColor="#1a2336" FallbackColor="#252c39" />
+        </ResourceDictionary>
+        <!--GradientBG-->
+
+
+    </ResourceDictionary.ThemeDictionaries>
+
+
+</ResourceDictionary>
