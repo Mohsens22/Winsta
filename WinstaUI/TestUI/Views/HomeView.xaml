@@ -7,29 +7,56 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     xmlns:ux ="using:TestUI.Controls"
+    xmlns:ct="using:Microsoft.Toolkit.Uwp.UI.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
         <RelativePanel>
-            <StackPanel Orientation="Horizontal">
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-            </StackPanel>
+            <ScrollViewer x:Name="StoryFeed">
+                <StackPanel  Orientation="Horizontal">
+                    <ux:InstaStoryFeedUC Margin="10,0,0,0" />
+                    <ux:InstaStoryFeedUC Margin="10,0,0,0" />
+                    <ux:InstaStoryFeedUC Margin="10,0,0,0" />
+                    <ux:InstaStoryFeedUC Margin="10,0,0,0" />
+                </StackPanel>
+            </ScrollViewer>
 
-            <StackPanel Orientation="Vertical">
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-                <ux:InstaStoryFeedUC />
-            </StackPanel>
+
+            <ScrollViewer RelativePanel.Below="StoryFeed" x:Name="Post" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
+                    <ct:DropShadowPanel Margin="5"
+                        BlurRadius="10"
+                                  ShadowOpacity="0.1"
+                                  OffsetX="0"
+                                  OffsetY="0"
+                                  Color="Black"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center">
+                        <ux:InstaMediaUC />
+                    </ct:DropShadowPanel>
+                    <ct:DropShadowPanel Margin="5"
+                        BlurRadius="10"
+                                  ShadowOpacity="0.1"
+                                  OffsetX="0"
+                                  OffsetY="0"
+                                  Color="Black"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center">
+                        <ux:InstaMediaUC />
+                    </ct:DropShadowPanel>
+                    <ct:DropShadowPanel Margin="5"
+                        BlurRadius="10"
+                                  ShadowOpacity="0.1"
+                                  OffsetX="0"
+                                  OffsetY="0"
+                                  Color="Black"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center">
+                        <ux:InstaMediaUC />
+                    </ct:DropShadowPanel>
+                </StackPanel>
+            </ScrollViewer>
+
         </RelativePanel>
     </Grid>
 </Page>

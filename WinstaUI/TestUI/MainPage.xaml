@@ -71,8 +71,8 @@
                         <Setter Target="Split.IsPaneOpen" Value="False" />
                         <Setter Target="Split.DisplayMode" Value="Overlay" />
                         <Setter Target="Split.PaneBackground" Value="{ThemeResource CustomInAppAcrylicBrush}" />
-                        <Setter Target="Fr.Margin" Value="10,0,10,0" />
-                        <Setter Target="Stak.Margin" Value="5,0,0,0" />
+                        <Setter Target="Fr.Margin" Value="5,0,10,0" />
+                        <Setter Target="Stak.Margin" Value="0,0,0,0" />
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
