@@ -10,6 +10,11 @@
             </Style>
             <SolidColorBrush x:Key="AppBackgroundBrush" Color="#ffffff" />
             <media:AcrylicBrush x:Key="CustomAcrylicBrush" BackgroundSource="HostBackdrop" TintOpacity="0.699999984353781" TintColor="#ffffff" FallbackColor="#cccad4" />
+            
+            <LinearGradientBrush x:Key="AppBackgroundGrad" EndPoint="0,1" StartPoint="1,0">
+                <GradientStop Color="White" Offset="0"/>
+                <GradientStop Color="White" Offset="1.5"/>
+            </LinearGradientBrush>
         </ResourceDictionary>
         <ResourceDictionary x:Key="Dark">
             <Style x:Key="TitleIcon" TargetType="Image">
@@ -17,6 +22,10 @@
             </Style>
             <SolidColorBrush x:Key="AppBackgroundBrush" Color="#1a2336" />
             <media:AcrylicBrush x:Key="CustomAcrylicBrush" BackgroundSource="HostBackdrop" TintOpacity="0.699999984353781" TintColor="#1a2336" FallbackColor="#252c39" />
+            <LinearGradientBrush x:Key="AppBackgroundGrad" EndPoint="0,1" StartPoint="1,0">
+                <GradientStop Color="#29354e" Offset="-1"/>
+                <GradientStop Color="#070d18" Offset="1.5"/>
+            </LinearGradientBrush>
         </ResourceDictionary>
         <!--GradientBG-->
 
