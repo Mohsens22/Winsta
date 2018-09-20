@@ -26,5 +26,6 @@ namespace TestUI
         {
             this.InitializeComponent();
         }
+        private void HmenuBTN_Click(object sender, RoutedEventArgs e) => Split.IsPaneOpen = !Split.IsPaneOpen;
     }
 }

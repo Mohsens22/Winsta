@@ -20,9 +20,14 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid>
-                    <Image Style="{StaticResource TitleIcon}" Height="27" Grid.Row="0" Margin="35,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                    <StackPanel Margin="35,0,0,0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                        <Button x:Name="HmenuBTN" Content="&#xE700;" Background="Transparent" BorderThickness="0,0,0,0" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" FontSize="18" Click="HmenuBTN_Click" Height="48" Width="48"/>
+
+                        <Image Style="{StaticResource TitleIcon}" Height="27" Grid.Row="0"  />
+                    </StackPanel>
+
                 </Grid>
-                
+
                 <Frame x:Name="Fr" HorizontalAlignment="Stretch" Margin="40,20,30,0" Grid.Row="1" VerticalAlignment="Stretch" />
             </Grid>
 
@@ -36,6 +41,7 @@
                         <AdaptiveTrigger MinWindowWidth="900" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="HmenuBTN.Visibility" Value="Collapsed" />
                         <Setter Target="Split.IsPaneOpen" Value="True"/>
                         <Setter Target="Split.DisplayMode" Value="Inline"/>
                     </VisualState.Setters>
@@ -45,6 +51,7 @@
                         <AdaptiveTrigger MinWindowWidth="600" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="HmenuBTN.Visibility" Value="Visible" />
                         <Setter Target="Split.IsPaneOpen" Value="False" />
                         <Setter Target="Split.DisplayMode" Value="Overlay" />
                     </VisualState.Setters>
@@ -54,6 +61,7 @@
                         <AdaptiveTrigger MinWindowWidth="0" />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>
+                        <Setter Target="HmenuBTN.Visibility" Value="Visible" />
                         <Setter Target="Split.IsPaneOpen" Value="False" />
                         <Setter Target="Split.DisplayMode" Value="Overlay" />
                     </VisualState.Setters>
