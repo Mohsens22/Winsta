@@ -10,9 +10,43 @@
     <Grid x:Name="MG" >
         <SplitView x:Name="Split" DisplayMode="Overlay" IsPaneOpen="True">
             <SplitView.Pane>
-                <Grid Margin="0,100,0,25">
+                <StackPanel Margin="45,55,0,0">
 
-                </Grid>
+                    <Grid PointerPressed="Grid_PointerPressed" VerticalAlignment="Center" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="65"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Ellipse x:Name="EllipsePicture" Opacity="1" Width="58" Height="58" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Ellipse.Fill>
+                                    <ImageBrush>
+                                        <ImageBrush.ImageSource>
+                                            <BitmapImage  UriSource="/Assets/SamplePics/MohsenPic.jpg"/>
+                                        </ImageBrush.ImageSource>
+                                    </ImageBrush>
+                                </Ellipse.Fill>
+                            </Ellipse>
+
+                            <Grid x:Name="AddStory" Visibility="Collapsed" BorderBrush="{ThemeResource ApplicationPageBackgroundThemeBrush}" CornerRadius="50" Background="{ThemeResource SystemControlHyperlinkTextBrush}" Padding="6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1">
+                                <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE948;" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="7" FontWeight="Bold" />
+                            </Grid>
+
+                        </Grid>
+                        <Grid Margin="10,0,0,0" Grid.Column="1">
+                            <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                                <HyperlinkButton Padding="0" Grid.Row="0" VerticalAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI" >
+                                    <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" Text="mohsens22" VerticalAlignment="Center"/>
+                                </HyperlinkButton>
+
+                                <TextBlock Margin="0,2,0,0" FontSize="12" Opacity="0.5" Text="5 MINS AGO" VerticalAlignment="Center" Visibility="Visible"/>
+                            </StackPanel>
+                        </Grid>
+
+                    </Grid>
+                    <Grid Margin="0,10,0,5" Background="White" Height="1" Opacity="0.4" />
+
+                </StackPanel>
             </SplitView.Pane>
             <Grid Background="{StaticResource AppBackgroundGrad}">
                 <Grid.RowDefinitions>

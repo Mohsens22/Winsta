@@ -25,5 +25,10 @@ namespace TestUI
         {
             Split.IsPaneOpen = !Split.IsPaneOpen;
         }
+
+        private void Grid_PointerPressed(object sender, Windows.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            Fr.Navigate(typeof(ProfileView));
+        }
     }
 }
