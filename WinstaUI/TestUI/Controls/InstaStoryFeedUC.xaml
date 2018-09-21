@@ -5,17 +5,16 @@
     xmlns:local="using:TestUI.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    d:DesignHeight="110"
-    d:DesignWidth="85">
+    mc:Ignorable="d">
 
     <Grid VerticalAlignment="Center">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Ellipse x:Name="BorderStory" Width="62" Height="62" VerticalAlignment="Center" HorizontalAlignment="Center" StrokeThickness="1.2" RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            
+            <Ellipse x:Name="BorderStory" Width="62" Height="62" VerticalAlignment="Center" HorizontalAlignment="Center" StrokeThickness="1.2" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
                 <Ellipse.RenderTransform>
                     <CompositeTransform Rotation="30"/>
                 </Ellipse.RenderTransform>
@@ -38,11 +37,20 @@
                 </Ellipse.Fill>
             </Ellipse>
 
-            <Grid x:Name="AddStory" Visibility="Collapsed" BorderThickness="1.8" BorderBrush="{ThemeResource ApplicationPageBackgroundThemeBrush}" CornerRadius="50" Background="{ThemeResource SystemControlHyperlinkTextBrush}" Padding="6" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Grid x:Name="AddStory" Visibility="Collapsed" BorderBrush="{ThemeResource ApplicationPageBackgroundThemeBrush}" CornerRadius="50" Background="{ThemeResource SystemControlHyperlinkTextBrush}" Padding="6" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1">
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE948;" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="7" FontWeight="Bold" />
             </Grid>
 
         </Grid>
-        
+        <Grid Margin="10,0,0,0" Grid.Column="1">
+            <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                <HyperlinkButton Padding="0" Grid.Row="0" VerticalAlignment="Center" FontWeight="SemiBold" FontFamily="Segoe UI" >
+                    <TextBlock FontSize="13" FontWeight="SemiBold" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" Text="mohsens22" VerticalAlignment="Center"/>
+                </HyperlinkButton>
+
+                <TextBlock  FontSize="10" Foreground="{StaticResource XCapBrush}" Opacity="0.8" Text="5 MINS AGO" VerticalAlignment="Center" Visibility="Visible"/>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </UserControl>

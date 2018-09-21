@@ -8,6 +8,7 @@
             <Style x:Key="TitleIcon" TargetType="Image">
                 <Setter Property="Source" Value="/Assets/Headings/WinstappBlack.png"/>
             </Style>
+            <SolidColorBrush x:Key="TheLine" Color="#e1e1e1" />
             <SolidColorBrush x:Key="AppBackgroundBrush" Color="#ffffff" />
             <SolidColorBrush x:Key="XCapBrush" Color="#a5a7aa" />
             <LinearGradientBrush x:Key="PostBG" EndPoint="0,1" StartPoint="1,0">
@@ -29,6 +30,7 @@
             </Style> 
             <SolidColorBrush x:Key="AppBackgroundBrush" Color="#1a2336" />
             <SolidColorBrush x:Key="XCapBrush" Color="#5674b1" />
+            <SolidColorBrush x:Key="TheLine" Color="#ffffff" />
             <LinearGradientBrush x:Key="PostBG" EndPoint="0,1" StartPoint="1,0">
                 <GradientStop Color="#29354d" Offset="-1"/>
                 <GradientStop Color="#182234" Offset="1.5"/>

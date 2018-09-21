@@ -11,21 +11,25 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <RelativePanel>
-            
+        <ScrollViewer x:Name="Post" >
 
-
-            <ScrollViewer x:Name="Post" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
-                
-                <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
-                    <ScrollViewer x:Name="StoryFeed">
-                        <StackPanel  Orientation="Horizontal">
-                            <ux:InstaStoryFeedUC Margin="10,0,0,0" />
-                            <ux:InstaStoryFeedUC Margin="10,0,0,0" />
-                            <ux:InstaStoryFeedUC Margin="10,0,0,0" />
-                            <ux:InstaStoryFeedUC Margin="10,0,0,0" />
-                        </StackPanel>
-                    </ScrollViewer>
+            <RelativePanel >
+                <StackPanel Margin="10,5,10,3" x:Name="StoryFeed"   MinWidth="250"   >
+                    <StackPanel>
+                        <Grid >
+                            <TextBlock FontSize="17" VerticalAlignment="Bottom" FontWeight="SemiBold" Text="Stories" />
+                            <TextBlock FontSize="12" VerticalAlignment="Bottom" Text="Watch All" HorizontalAlignment="Right" Foreground="{StaticResource XCapBrush}"/>
+                        </Grid>
+                        <Grid Margin="0,10,0,5" Height="1" Opacity="0.8" Background="{StaticResource TheLine}"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" x:Name="Stor" Margin="0,5,0,0" Orientation="Horizontal">
+                        <ux:InstaStoryFeedUC x:Name="Mst1" Margin="5,5" />
+                        <ux:InstaStoryFeedUC x:Name="Mst2" Margin="5,5" />
+                        <ux:InstaStoryFeedUC x:Name="Mst3" Margin="5,5" />
+                        <ux:InstaStoryFeedUC x:Name="Mst4" Margin="5,5" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="Posts" >
                     <ct:DropShadowPanel Margin="5"
                         BlurRadius="10"
                                   ShadowOpacity="0.1"
@@ -57,8 +61,43 @@
                         <ux:InstaMediaUC />
                     </ct:DropShadowPanel>
                 </StackPanel>
-            </ScrollViewer>
+                
+            </RelativePanel>
+        </ScrollViewer>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="ThisPageStates">
+                <VisualState x:Name="UltraWideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1280" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Stor.Orientation" Value="Vertical" />
+                        <Setter Target="StoryFeed.(RelativePanel.AlignLeftWithPanel)" Value="False" />
+                        <Setter Target="StoryFeed.(RelativePanel.AlignRightWithPanel)" Value="True" />
 
-        </RelativePanel>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        
+                        <Setter Target="StoryFeed.(RelativePanel.AlignLeftWithPanel)" Value="True" />
+                        <Setter Target="StoryFeed.(RelativePanel.AlignRightWithPanel)" Value="True" />
+                        
+                        <Setter Target="Posts.(RelativePanel.AlignLeftWithPanel)" Value="True" />
+                        <Setter Target="Posts.(RelativePanel.AlignRightWithPanel)" Value="True" />
+                        <Setter Target="Posts.(RelativePanel.Below)" Value="StoryFeed" />
+
+                        <Setter Target="Mst1.Width" Value="65" />
+                        <Setter Target="Mst2.Width" Value="65" />
+                        <Setter Target="Mst3.Width" Value="65" />
+                        <Setter Target="Mst4.Width" Value="65" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
     </Grid>
+    
 </Page>

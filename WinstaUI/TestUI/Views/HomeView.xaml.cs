@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -27,9 +28,6 @@ namespace TestUI.Views
             this.InitializeComponent();
         }
 
-        private void Post_DirectManipulationStarted(object sender, object e)
-        {
-
-        }
+        ObservableCollection<int> st = new ObservableCollection<int>() { 1, 2, 3, 4 };
     }
 }

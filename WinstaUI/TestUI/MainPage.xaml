@@ -16,14 +16,13 @@
             </SplitView.Pane>
             <Grid Background="{StaticResource AppBackgroundGrad}">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="90"/>
+                    <RowDefinition x:Name="HEaderHeight" Height="70"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid>
-                    <StackPanel Name="Stak" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <StackPanel Name="Stak" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Left">
                         <Button x:Name="HmenuBTN" Content="&#xE700;" Background="Transparent" BorderThickness="0,0,0,0" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Top" FontSize="18" Click="HmenuBTN_Click" Height="48" Width="48"/>
-
-                        <Image Style="{StaticResource TitleIcon}" Height="27" Grid.Row="0"  />
+                        <Image Style="{StaticResource TitleIcon}" Margin="10,0,0,0" Height="27" Grid.Row="0"  />
                     </StackPanel>
 
                 </Grid>
