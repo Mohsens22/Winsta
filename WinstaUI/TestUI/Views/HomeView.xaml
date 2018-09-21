@@ -12,18 +12,20 @@
 
     <Grid>
         <RelativePanel>
-            <ScrollViewer x:Name="StoryFeed">
-                <StackPanel  Orientation="Horizontal">
-                    <ux:InstaStoryFeedUC Margin="10,0,0,0" />
-                    <ux:InstaStoryFeedUC Margin="10,0,0,0" />
-                    <ux:InstaStoryFeedUC Margin="10,0,0,0" />
-                    <ux:InstaStoryFeedUC Margin="10,0,0,0" />
-                </StackPanel>
-            </ScrollViewer>
+            
 
 
-            <ScrollViewer RelativePanel.Below="StoryFeed" x:Name="Post" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+            <ScrollViewer x:Name="Post" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
+                
                 <StackPanel HorizontalAlignment="Left" Orientation="Vertical">
+                    <ScrollViewer x:Name="StoryFeed">
+                        <StackPanel  Orientation="Horizontal">
+                            <ux:InstaStoryFeedUC Margin="10,0,0,0" />
+                            <ux:InstaStoryFeedUC Margin="10,0,0,0" />
+                            <ux:InstaStoryFeedUC Margin="10,0,0,0" />
+                            <ux:InstaStoryFeedUC Margin="10,0,0,0" />
+                        </StackPanel>
+                    </ScrollViewer>
                     <ct:DropShadowPanel Margin="5"
                         BlurRadius="10"
                                   ShadowOpacity="0.1"
